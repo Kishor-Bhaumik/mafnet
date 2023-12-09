@@ -1,0 +1,30 @@
+
+  with_srm: True
+  with_con: True
+    
+  encoder: 'resnet50'
+  aspp_outplane: 512
+  num_class: 2
+  optimizer: 'adam'
+  lr: 0.0001
+  epoch: 100
+  con_alpha: 1
+  # mem_dim_fake : 20
+  # mem_dim_real : 20
+  mem_dim : 20
+  fea_dim : 256
+  triplet_margin: 1.0
+  triplet_hard : False
+
+  dataset_name: 'imd_2020' #imd_2020 or casia or nist or coverage
+  base_dir: 'forgery/'
+  imd_2020_dir: 'forgery/IMD2020'
+  batch_size: 16
+  patch_size: 4
+  im_size: 224
+  contrast_temperature: 0.1
+  mean: [0.485, 0.456, 0.406] 
+  std: [0.229, 0.224, 0.225]
+  imbalance_weight: [0.0892, 0.9108]  
+
+    
